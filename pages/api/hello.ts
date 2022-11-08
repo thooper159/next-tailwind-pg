@@ -3,11 +3,17 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
   name: string
+  userName: string
+  profilePic: string
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({ 
+    name: 'John Doe',
+    userName: 'johndoe',
+    profilePic: 'https://i.imgur.com/Nm3Ruvl.jpeg' 
+  })
 }
